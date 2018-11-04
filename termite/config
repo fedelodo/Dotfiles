@@ -1,0 +1,9 @@
+[colors]
+background = rgba(63, 63, 63, 0.8)
+
+[options]
+font = Monospace 9
+font = xos4 Terminus 12px
+font = Droid Sans Mono 8
+clickable_url = true
+dynamic_title = true
