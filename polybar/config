@@ -17,17 +17,22 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #99463687
-background-alt = #cc889091
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #b353c0c6
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-high = #b353c0c6
-foreground-dim = #676e7d
+orange = #d79921
+darkgray = #8a8a8a
+white = #f9f5d7
+gray = #585858
+black = #090909
+red = #db3f3f
+blue = #95aec7
+yellow = #c7ae95
+green = #aec795
+background = #111313
+background-alt = #111313
+foreground = #f9f5d7
+foreground-alt = #f9f5d7
+primary = #111313
+secondary = #d79921
+alert = #db2f2f
 
 [bar/top]
 width = 100%
@@ -36,7 +41,7 @@ offset-x = 0
 offset-y = -1
 ;bottom = true
 
-background = ${colors.background}
+background = #cc111313
 foreground = ${colors.foreground}
 
 spacing = 1 
@@ -90,16 +95,18 @@ index-sort = true
 
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = #ccffffff
-label-mode-background = ${colors.high}
+label-mode-foreground = ${colors.primary}
+label-mode-background = ${colors.yellow}
+label-mode-underline = ${colors.white}
 
 label-focused = %index%
-label-focused-background = 
-label-focused-underline = ${colors.foreground-alt}
+label-focused-background = ${colors.white}
+label-focused-foreground = ${colors.primary}
+label-focused-underline = ${colors.yellow}
 label-focused-padding = 2
 
 label-unfocused = %index%
-label-unfocused-foreground = ${colors.foreground-dim}
+label-unfocused-foreground = ${colors.secondary}
 label-unfocused-padding = 2
 
 label-urgent = %index%
@@ -107,7 +114,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-visible = %index%
-label-visible-foreground = ${colors.foreground-alt}
+label-visible-foreground = ${colors.gray}
 label-visible-padding = 2
 
 [module/xbacklight]
@@ -209,7 +216,7 @@ expand-right = true
 format-spacing = 1
 label-font = 6
 label-open =  
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.red}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |

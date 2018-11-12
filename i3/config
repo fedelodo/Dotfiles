@@ -163,7 +163,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-smart_gaps on
+# smart_gaps on
 smart_borders no_gaps
 gaps inner 5
 gaps outer 5
@@ -182,6 +182,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec xbacklight -inc 16 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 16 # decrease screen brightness
 
+bindsym --release Print exec "scrot -m '/home/federico/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Shift+Print exec "scrot -s '/home/federico/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
+bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '/home/federico/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
 
 bindsym Control+$mod+l exec i3lock  
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
